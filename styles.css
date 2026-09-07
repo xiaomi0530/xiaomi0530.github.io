@@ -100,8 +100,8 @@ a {
 
 .avatar-mark {
   flex: 0 0 auto;
-  width: 104px;
-  height: 104px;
+  width: 126px;
+  height: 126px;
   margin: 0;
   border: 1px solid var(--line);
   border-radius: 50%;
@@ -375,6 +375,14 @@ time,
   padding: 12px;
 }
 
+.media-note {
+  margin: 0;
+  color: var(--soft);
+  font-size: 12px;
+  line-height: 1.6;
+  text-align: center;
+}
+
 .media-item {
   margin: 0;
   overflow: hidden;
@@ -563,8 +571,8 @@ body.js-reveal .reveal-target.is-visible {
   }
 
   .avatar-mark {
-    width: 84px;
-    height: 84px;
+    width: 92px;
+    height: 92px;
   }
 
   h1 {
