@@ -635,6 +635,10 @@ body.js-reveal .reveal-target.is-visible {
   .period,
   .role,
   .status-pill {
+    display: inline-flex;
+    width: fit-content;
+    max-width: 100%;
+    align-self: flex-start;
     font-size: 12px;
     padding: 3px 8px;
   }
