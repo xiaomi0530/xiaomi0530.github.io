@@ -379,9 +379,8 @@ time,
 }
 
 .media-scroll-preview {
-  width: min(100%, 560px);
-  margin-inline: auto;
-  height: min(72vh, 760px);
+  width: 100%;
+  height: min(48vw, 460px);
   overflow: auto;
   background: #f3f6fa;
 }
@@ -505,11 +504,11 @@ li + li {
 
   .media-portrait,
   .media-scroll-preview {
-    width: min(100%, 460px);
+    width: 100%;
   }
 
   .media-scroll-preview {
-    height: 520px;
+    height: 360px;
   }
 }
 
