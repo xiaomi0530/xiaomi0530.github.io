@@ -87,9 +87,10 @@
                 <p class="period">大一上</p>
                 <h3>面包板单周期单发射CPU</h3>
               </div>
+              <span class="role">我自己XD</span>
             </div>
             <p class="project-intro">
-              基于分立逻辑器件与面包板搭建单周期单发射 CPU，通过手工连线实现取指、译码、运算、访存与写回等核心数据通路，并结合指示灯、拨码开关和外部控制模块完成运行状态观察与功能验证。该项目强调对 CPU 底层结构的直接理解，将抽象的处理器组成原理转化为可调试、可演示的硬件实体。
+              独立搭建基于分立逻辑器件与面包板的单周期单发射CPU，手工连线实现取指、译码、运算、访存、写回等核心数据通路，结合指示灯、拨码开关及外部控制模块完成运行状态观测与功能验证，将抽象处理器组成原理转化为可调试、可演示的硬件实体。
             </p>
             <div class="media-showcase" aria-label="面包板 CPU 图片与视频展示">
               <figure class="media-item media-video">
@@ -114,8 +115,14 @@
                 <p class="period">大一上</p>
                 <h3>从零完整构建FPGA上RV32I-CPU与配套RTOS</h3>
               </div>
-              <span class="role">-</span>
+              <span class="role">我自己XD</span>
             </div>
+            <p class="project-intro">
+              基于 Xilinx Artix-7 FPGA 搭建的 RV32I 处理器与系统平台，围绕指令流水、数据通路、CSR/中断控制、总线互联和外设访问完成从 CPU 到 SoC 的完整实现。工程使用 100MHz 板载时钟，经时钟管理生成 50MHz 核心时钟与 25MHz VGA 时钟，整合 UART、VGA、microSD SPI、PS/2 鼠标、PWM 音频、定时器、RAM/ROM 等模块。
+            </p>
+            <p class="project-intro">
+              此外，配套轻量级RTOS，支持终端、窗口切换、贪吃蛇等交互应用，并可从SD卡加载 .bin 应用、音频与视频文件直接运行，使CPU具备完整嵌入式系统交互能力。
+            </p>
           </article>
 
           <article class="project-card">
@@ -136,8 +143,8 @@
           <article class="project-card">
             <div class="project-topline">
               <div>
-                <p class="period">大一下 2026</p>
-                <h3>Synopsys 全流程 IC 设计暑期学校</h3>
+                <p class="period">大一下</p>
+                <h3>2026 Synopsys 全流程 IC 设计暑期学校</h3>
               </div>
               <span class="role">单日之星 + 优秀学员</span>
             </div>
@@ -154,30 +161,82 @@
           <h2 id="skills-title">技能特长</h2>
         </div>
 
-        <div class="skill-grid">
-          <article>
-            <h3>语言能力</h3>
-            <p>CET4 分数 600+，已修读英语课程，掌握基础日语读写。</p>
+        <p class="skills-lead">
+          把能力拆成几条线放在一起看，会比单纯列清单更直观一点。
+        </p>
+
+        <div class="skills-map" aria-label="能力地图">
+          <div class="skill-node">
+            <span>语言</span>
+            <strong>English / Japanese</strong>
+          </div>
+          <div class="skill-node">
+            <span>编程</span>
+            <strong>C / Python / TCL</strong>
+          </div>
+          <div class="skill-node">
+            <span>硬件</span>
+            <strong>Verilog / FPGA</strong>
+          </div>
+          <div class="skill-node">
+            <span>EDA</span>
+            <strong>Vivado / Synopsys / Cadence</strong>
+          </div>
+          <div class="skill-node">
+            <span>AI</span>
+            <strong>Deepseek / GPT / Codex</strong>
+          </div>
+          <div class="skill-node">
+            <span>协作</span>
+            <strong>队长 / 班长</strong>
+          </div>
+          <div class="skill-node">
+            <span>兴趣</span>
+            <strong>音乐 / 阅读 / 写作</strong>
+          </div>
+        </div>
+
+        <div class="skills-panels">
+          <article class="skill-panel skill-panel-tech">
+            <div class="panel-head">
+              <p class="panel-kicker">Technical Stack</p>
+              <h3>技术能力</h3>
+            </div>
+            <div class="skill-item">
+              <h4>语言能力</h4>
+              <p>CET4 分数600+，已修读完学校要求的进阶英语与高阶英语课程；掌握基础的日语读写。</p>
+            </div>
+            <div class="skill-item">
+              <h4>软件编程</h4>
+              <p>较熟练掌握C与Python，掌握基本的Make与TCL使用技能。</p>
+            </div>
+            <div class="skill-item">
+              <h4>硬件语言</h4>
+              <p>较熟练掌握Verilog语言。</p>
+            </div>
+            <div class="skill-item">
+              <h4>软件使用</h4>
+              <p>较熟练掌握Vivado进行FPGA设计，会基础使用Synopsys(VCS、Verdi、Formality、StarRC、FC、ICV、CC、PT、PP等)、Cadence(Innovus、Virtuoso、Calibre等)旗下EDA工具进行数字或模拟IC设计，也掌握使用Linux基本命令、使用Git进行版本追踪管理等必要基本能力。</p>
+            </div>
+            <div class="skill-item">
+              <h4>AI 使用</h4>
+              <p>愿意拥抱AI工具进行答疑解惑与Agent辅助工作，使用过Deepseek、ChatGPT、Gemini、Claude与Codex，具备一定Vibe Coding能力与标准化AI Agent使用与管理工作流的能力。</p>
+            </div>
           </article>
-          <article>
-            <h3>软件编程</h3>
-            <p>熟练掌握 C 与 Python，掌握基本 Make 与 TCL 使用技能。</p>
-          </article>
-          <article>
-            <h3>硬件语言</h3>
-            <p>熟练掌握 Verilog 语言。</p>
-          </article>
-          <article>
-            <h3>软件使用</h3>
-            <p>熟练使用 Vivado 进行 FPGA 设计，会基础使用 Synopsys、Cadence 与 Calibre 等 EDA 工具。</p>
-          </article>
-          <article>
-            <h3>AI 使用</h3>
-            <p>使用 Deepseek、ChatGPT、Gemini、Claude 与 Codex 辅助学习、开发和工程管理。</p>
-          </article>
-          <article>
-            <h3>团队能力</h3>
-            <p>多次担任项目队长或组长，具备团队协作、项目管理与交流经验。</p>
+
+          <article class="skill-panel skill-panel-soft">
+            <div class="panel-head">
+              <p class="panel-kicker">People & Taste</p>
+              <h3>协作和兴趣</h3>
+            </div>
+            <div class="skill-item">
+              <h4>团队能力</h4>
+              <p>多次担任项目队长或组长，在大学班内担任班长，具有较为丰富的团队交流合作与项目管理协调经验，乐于与人打交道。</p>
+            </div>
+            <div class="skill-item skill-item-accent">
+              <h4>兴趣爱好</h4>
+              <p>从小学习小提琴，掌握木吉他、电吉他、钢琴、长笛等乐器，古典流行都喜欢，在自组校园乐队（已一年有余）中担任节奏吉他手与小提琴手，有过多次商演经历；爱看各类小说（尤其科幻与悬疑推理），喜欢中西诗歌词曲与其他各类文学作品。</p>
+            </div>
           </article>
         </div>
       </section>
