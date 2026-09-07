@@ -3,10 +3,203 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
+    <meta name="description" content="赖奕承的个人简历网站，展示教育背景、项目经历和技能特长。">
+    <title>赖奕承 | 个人简历</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
+    <header class="site-header">
+      <a class="brand" href="#top">赖奕承</a>
+      <nav class="site-nav" aria-label="页面导航">
+        <a href="#education">教育背景</a>
+        <a href="#projects">项目经历</a>
+        <a href="#skills">技能特长</a>
+      </nav>
+    </header>
+
+    <main id="top" class="resume">
+      <section class="hero" aria-labelledby="name">
+        <div class="hero-main">
+          <p class="eyebrow">Resume</p>
+          <h1 id="name">赖奕承</h1>
+          <p class="summary">
+            复旦大学工科试验班本科在读，关注集成电路、FPGA、RISC-V CPU 设计与 EDA 工具流程。
+          </p>
+
+          <dl class="profile-grid">
+            <div>
+              <dt>年龄</dt>
+              <dd>19岁</dd>
+            </div>
+            <div>
+              <dt>性别</dt>
+              <dd>男</dd>
+            </div>
+            <div>
+              <dt>籍贯</dt>
+              <dd>中国台湾</dd>
+            </div>
+            <div>
+              <dt>政治面貌</dt>
+              <dd>群众</dd>
+            </div>
+            <div>
+              <dt>联系电话</dt>
+              <dd><a href="tel:17800293680">17800293680</a></dd>
+            </div>
+            <div>
+              <dt>联系邮箱</dt>
+              <dd><a href="mailto:25303040095@m.fudan.edu.cn">25303040095@m.fudan.edu.cn</a></dd>
+            </div>
+          </dl>
+        </div>
+
+        <aside class="portrait-card" aria-label="头像">
+          <div class="portrait-placeholder">LYC</div>
+          <p>Fudan University</p>
+        </aside>
+      </section>
+
+      <section class="section" id="education" aria-labelledby="education-title">
+        <div class="section-heading">
+          <p class="eyebrow">Education</p>
+          <h2 id="education-title">教育背景</h2>
+        </div>
+        <article class="education-item">
+          <div>
+            <time datetime="2025-09">2025.09 - 至今</time>
+            <h3>复旦大学</h3>
+          </div>
+          <p>工科试验班（集成电路与微纳电子创新学院）（本科）</p>
+        </article>
+      </section>
+
+      <section class="section" id="projects" aria-labelledby="projects-title">
+        <div class="section-heading">
+          <p class="eyebrow">Projects</p>
+          <h2 id="projects-title">项目经历</h2>
+        </div>
+
+        <div class="project-list">
+          <article class="project-card">
+            <div class="project-topline">
+              <div>
+                <p class="period">大一上</p>
+                <h3>高度近视智能预测科研课题</h3>
+              </div>
+              <span class="role">主要负责人</span>
+            </div>
+            <p>
+              接手前组内博士生半成品项目，快速掌握深度学习理论与 PyTorch 等 Python 库，
+              与团队成员协作完成模型优化。
+            </p>
+            <ul>
+              <li>重构训练、验证与测试流程，修正原评估方法缺陷，建立标准化评估规范。</li>
+              <li>创新改进并融合模型架构，使模型性能较初始版本提升 50% 以上。</li>
+              <li>参与专利撰写与 ARVO 会议摘要撰写。</li>
+            </ul>
+          </article>
+
+          <article class="project-card compact">
+            <div class="project-topline">
+              <div>
+                <p class="period">大一上</p>
+                <h3>面包板单周期单发射 CPU</h3>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-topline">
+              <div>
+                <p class="period">大一上</p>
+                <h3>从零完整构建 FPGA 上 RV32I-CPU 与配套 RTOS</h3>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-topline">
+              <div>
+                <p class="period">大一下</p>
+                <h3>第十届全国大学生集成电路创新创业大赛七星微赛道</h3>
+              </div>
+              <span class="role">队长</span>
+            </div>
+            <p>
+              设计并实现支持 RISC-V32IM 指令集、工作在 100MHz 的 FPGA 单发射准六级流水线 CPU。
+              最终达到 2.76 CoreMark/MHz，LUT 约 3600 个，动态功耗 0.231W。
+            </p>
+            <ul>
+              <li>独立完成各类时序优化，保证功能复杂化下时序收敛。</li>
+              <li>指导两名零基础队员掌握 FPGA 与 CPU 设计基础。</li>
+              <li>撰写基础 CPU 架构，并与团队提出并实现多种创新优化方法。</li>
+              <li>充分利用 FPGA 片上资源特性，使性能提升近 40%，最终在 Artix-7 FPGA 板上上板验证跑分。</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <div class="project-topline">
+              <div>
+                <p class="period">大一下 2026</p>
+                <h3>Synopsys 全流程 IC 设计暑期学校</h3>
+              </div>
+              <span class="role">单日之星 + 优秀学员</span>
+            </div>
+            <p>
+              在 Synopsys 工程师指导下，使用 VCS、Verdi、SpyGlass、Fusion Compiler、
+              Formality、PrimeTime、StarRC、IC Validator、TestMAX、PrimePower 等工具，
+              完成数字芯片从 RTL 到 GDSII 的全流程。
+            </p>
+            <ul>
+              <li>覆盖前仿真、逻辑综合、物理实现、形式验证、时序签核、物理验证、可测性设计及功耗分析。</li>
+              <li>完成 Custom Compiler 原理图与版图设计，StarRC 提取寄生参数，ICV 进行物理验证。</li>
+              <li>掌握前后端全链路协同与迭代优化方法，积累工程实践经验。</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="skills" aria-labelledby="skills-title">
+        <div class="section-heading">
+          <p class="eyebrow">Skills</p>
+          <h2 id="skills-title">技能特长</h2>
+        </div>
+
+        <div class="skill-grid">
+          <article>
+            <h3>语言能力</h3>
+            <p>CET4 分数 600+，已修读英语课程，掌握基础日语读写。</p>
+          </article>
+          <article>
+            <h3>软件编程</h3>
+            <p>熟练掌握 C 与 Python，掌握基本 Make 与 TCL 使用技能。</p>
+          </article>
+          <article>
+            <h3>硬件语言</h3>
+            <p>熟练掌握 Verilog 语言。</p>
+          </article>
+          <article>
+            <h3>软件使用</h3>
+            <p>熟练使用 Vivado 进行 FPGA 设计，会基础使用 Synopsys、Cadence 与 Calibre 等 EDA 工具。</p>
+          </article>
+          <article>
+            <h3>AI 使用</h3>
+            <p>使用 Deepseek、ChatGPT、Gemini、Claude 与 Codex 辅助学习、开发和工程管理。</p>
+          </article>
+          <article>
+            <h3>团队能力</h3>
+            <p>多次担任项目队长或组长，具备团队协作、项目管理与交流经验。</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> 赖奕承</span>
+      <a href="#top">返回顶部</a>
+    </footer>
+
     <script src="script.js"></script>
   </body>
 </html>
