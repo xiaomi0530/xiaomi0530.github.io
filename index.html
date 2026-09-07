@@ -23,30 +23,10 @@
           <p class="eyebrow">Resume</p>
           <h1 id="name">赖奕承</h1>
           <p class="summary">
-            复旦大学工科试验班本科在读，关注集成电路、FPGA、RISC-V CPU 设计与 EDA 工具流程。
+            复旦大学集成电路与微纳电子创新学院，本科在读。
           </p>
 
           <dl class="profile-grid">
-            <div>
-              <dt>年龄</dt>
-              <dd>19岁</dd>
-            </div>
-            <div>
-              <dt>性别</dt>
-              <dd>男</dd>
-            </div>
-            <div>
-              <dt>籍贯</dt>
-              <dd>中国台湾</dd>
-            </div>
-            <div>
-              <dt>政治面貌</dt>
-              <dd>群众</dd>
-            </div>
-            <div>
-              <dt>联系电话</dt>
-              <dd><a href="tel:17800293680">17800293680</a></dd>
-            </div>
             <div>
               <dt>联系邮箱</dt>
               <dd><a href="mailto:25303040095@m.fudan.edu.cn">25303040095@m.fudan.edu.cn</a></dd>
@@ -89,32 +69,56 @@
               </div>
               <span class="role">主要负责人</span>
             </div>
-            <p>
-              接手前组内博士生半成品项目，快速掌握深度学习理论与 PyTorch 等 Python 库，
-              与团队成员协作完成模型优化。
-            </p>
-            <ul>
-              <li>重构训练、验证与测试流程，修正原评估方法缺陷，建立标准化评估规范。</li>
-              <li>创新改进并融合模型架构，使模型性能较初始版本提升 50% 以上。</li>
-              <li>参与专利撰写与 ARVO 会议摘要撰写。</li>
-            </ul>
+            <div class="project-body">
+              接手前组内博士生半成品项目，快速掌握深度学习理论与 PyTorch等Python库，与团队成员协作完成模型优化。
+
+贡献：1. 重构训练/验证/测试流程，修正原评估方法缺陷，建立标准化评估规范，提升结果科学性；2. 创新改进并融合模型架构，使模型性能较初始版本提升 50% 以上；3.参与专利撰写与ARVO会议摘要撰写 (IOVS June 2026, Vol.67, Issue 7, 4636)。
+            </div>
+            <div class="article-frame">
+              <iframe
+                title="IOVS 文献摘要"
+                src="https://iovs.arvojournals.org/article.aspx?articleid=2812344&resultClick=1"
+                loading="lazy">
+              </iframe>
+            </div>
           </article>
 
           <article class="project-card compact">
             <div class="project-topline">
               <div>
                 <p class="period">大一上</p>
-                <h3>面包板单周期单发射 CPU</h3>
+                <h3>面包板单周期单发射CPU</h3>
               </div>
+            </div>
+            <p class="project-intro">
+              基于分立逻辑器件与面包板搭建单周期单发射 CPU，通过手工连线实现取指、译码、运算、访存与写回等核心数据通路，并结合指示灯、拨码开关和外部控制模块完成运行状态观察与功能验证。该项目强调对 CPU 底层结构的直接理解，将抽象的处理器组成原理转化为可调试、可演示的硬件实体。
+            </p>
+            <div class="media-showcase" aria-label="面包板 CPU 图片与视频展示">
+              <figure class="media-item media-featured">
+                <a href="fig/BBCPU_all.jpg" target="_blank" rel="noreferrer" aria-label="打开面包板 CPU 整体连线大图">
+                  <img src="fig/BBCPU_all.jpg" alt="面包板单周期单发射 CPU 整体连线展示">
+                </a>
+              </figure>
+              <figure class="media-item media-portrait">
+                <a href="fig/BBCPU_evl.jpg" target="_blank" rel="noreferrer" aria-label="打开面包板 CPU 验证与调试记录大图">
+                  <img src="fig/BBCPU_evl.jpg" alt="面包板单周期单发射 CPU 验证与调试记录">
+                </a>
+              </figure>
+              <figure class="media-item media-video">
+                <video autoplay muted loop playsinline controls preload="auto" poster="fig/BBCPU_show_poster.jpg">
+                  <source src="fig/BBCPU_show_landscape_fixed.mp4" type="video/mp4">
+                </video>
+              </figure>
             </div>
           </article>
 
-          <article class="project-card">
+          <article class="project-card compact">
             <div class="project-topline">
               <div>
                 <p class="period">大一上</p>
-                <h3>从零完整构建 FPGA 上 RV32I-CPU 与配套 RTOS</h3>
+                <h3>从零完整构建FPGA上RV32I-CPU与配套RTOS</h3>
               </div>
+              <span class="role">-</span>
             </div>
           </article>
 
@@ -126,16 +130,11 @@
               </div>
               <span class="role">队长</span>
             </div>
-            <p>
-              设计并实现支持 RISC-V32IM 指令集、工作在 100MHz 的 FPGA 单发射准六级流水线 CPU。
-              最终达到 2.76 CoreMark/MHz，LUT 约 3600 个，动态功耗 0.231W。
-            </p>
-            <ul>
-              <li>独立完成各类时序优化，保证功能复杂化下时序收敛。</li>
-              <li>指导两名零基础队员掌握 FPGA 与 CPU 设计基础。</li>
-              <li>撰写基础 CPU 架构，并与团队提出并实现多种创新优化方法。</li>
-              <li>充分利用 FPGA 片上资源特性，使性能提升近 40%，最终在 Artix-7 FPGA 板上上板验证跑分。</li>
-            </ul>
+            <div class="project-body">
+              设计并实现支持RISC-V32IM指令集、工作在100MHz的FPGA上单发射准六级流水线CPU。最终达到2.76 CoreMark/MHz，LUT仅约3600个，动态功耗0.231W，达到单发射低功耗处理器的高性能水平；同时完成各类时序优化，保证功能复杂化下时序收敛。
+
+贡献：1. 指导两名零基础队员掌握FPGA与CPU设计基础；2. 撰写实现基本的CPU架构，与团队合作提出并实现5种创新优化方法，充分利用FPGA片上资源特性，使性能提升近40%，最终在Artix7 FPGA板上上板验证跑分。
+            </div>
           </article>
 
           <article class="project-card">
@@ -146,16 +145,9 @@
               </div>
               <span class="role">单日之星 + 优秀学员</span>
             </div>
-            <p>
-              在 Synopsys 工程师指导下，使用 VCS、Verdi、SpyGlass、Fusion Compiler、
-              Formality、PrimeTime、StarRC、IC Validator、TestMAX、PrimePower 等工具，
-              完成数字芯片从 RTL 到 GDSII 的全流程。
-            </p>
-            <ul>
-              <li>覆盖前仿真、逻辑综合、物理实现、形式验证、时序签核、物理验证、可测性设计及功耗分析。</li>
-              <li>完成 Custom Compiler 原理图与版图设计，StarRC 提取寄生参数，ICV 进行物理验证。</li>
-              <li>掌握前后端全链路协同与迭代优化方法，积累工程实践经验。</li>
-            </ul>
+            <div class="project-body">
+              在Synopsys工程师指导下，使用VCS、Verdi、SpyGlass、Fusion Compiler、Formality、PrimeTime、StarRC、IC Validator、TestMAX、PrimePower/RedHawk等工具完成数字芯片从RTL到GDSII全流程，覆盖前仿真、逻辑综合、物理实现、形式验证、时序签核、物理验证、可测性设计及功耗/IR-EM分析；模拟部分使用Custom Compiler完成原理图与版图设计，StarRC提取寄生参数，ICV进行物理验证，TotemSC与ParagonX完成可靠性/IR分析及后仿真。最终通过DRC/LVS并达成时序收敛，功耗满足指标。掌握前后端全链路协同与迭代优化方法，积累工程实战经验，获评单日之星与暑期培训优秀学员。
+            </div>
           </article>
         </div>
       </section>
