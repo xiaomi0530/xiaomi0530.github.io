@@ -85,11 +85,52 @@ a {
   transition: transform 180ms ease, border-color 180ms ease, background-color 180ms ease, opacity 220ms ease;
 }
 
+.hero-main {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.hero-top {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.avatar-mark {
+  flex: 0 0 auto;
+  width: 104px;
+  height: 104px;
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  overflow: hidden;
+  background: #fff;
+}
+
+.avatar-mark img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 48% 28%;
+}
+
+.hero-copy {
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.avatar-right {
+  margin-top: 2px;
+}
+
 .eyebrow {
   margin: 0 0 8px;
   color: var(--accent);
-  font-size: 11px;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
@@ -205,7 +246,7 @@ dd {
 
 time,
 .period {
-  color: var(--accent);
+  color: #4f657f;
   font-weight: 700;
 }
 
@@ -213,6 +254,26 @@ time,
   margin: 0;
   color: var(--muted);
   font-size: 17px;
+}
+
+.education-item h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 9px;
+  border: 1px solid #d2dbe6;
+  border-radius: 999px;
+  color: #50657e;
+  background: #eef3f8;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
 }
 
 .project-list {
@@ -236,18 +297,27 @@ time,
 }
 
 .period {
-  margin-bottom: 3px;
-  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 11px;
+  margin-bottom: 10px;
+  border: 1px solid #d2dbe6;
+  border-radius: 999px;
+  background: #eef3f8;
+  color: #50657e;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1;
 }
 
 .role {
   flex: 0 0 auto;
   height: fit-content;
   padding: 4px 10px;
-  border: 1px solid var(--line);
+  border: 1px solid #d2dbe6;
   border-radius: 6px;
-  color: var(--muted);
-  background: #fafbfc;
+  color: #50657e;
+  background: #eef3f8;
   font-size: 13px;
   font-weight: 700;
 }
@@ -462,6 +532,10 @@ body.js-reveal .reveal-target.is-visible {
     gap: 4px;
   }
 
+  .hero-main {
+    flex-direction: column;
+  }
+
   .media-featured {
     aspect-ratio: 4 / 3;
   }
@@ -486,6 +560,11 @@ body.js-reveal .reveal-target.is-visible {
   .education-item,
   .skill-panel {
     padding: 18px;
+  }
+
+  .avatar-mark {
+    width: 84px;
+    height: 84px;
   }
 
   h1 {

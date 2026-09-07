@@ -1,9 +1,9 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="zh-CN">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="赖奕承的个人简历网站，展示教育背景、项目经历和技能特长。">
+    <meta name="description" content="赖奕承的个人简历网站">
     <title>赖奕承 | 个人简历</title>
     <link rel="stylesheet" href="styles.css">
   </head>
@@ -20,20 +20,29 @@
     <main id="top" class="resume">
       <section class="hero" aria-labelledby="name">
         <div class="hero-main">
-          <p class="eyebrow">Resume</p>
-          <h1 id="name">赖奕承</h1>
-          <p class="summary">
-            复旦大学集成电路与微纳电子创新学院，本科在读。
-          </p>
+          <div class="hero-copy">
+            <p class="eyebrow">Resume</p>
+            <h1 id="name">赖奕承</h1>
+            <p class="summary">
+              复旦大学集成电路与微纳电子创新学院，本科在读
+            </p>
 
-          <dl class="profile-grid">
-            <div>
-              <dt>联系邮箱</dt>
-              <dd><a href="mailto:25303040095@m.fudan.edu.cn">25303040095@m.fudan.edu.cn</a></dd>
-            </div>
-          </dl>
+            <dl class="profile-grid">
+              <div>
+                <dt>联系邮箱</dt>
+                <dd><a href="mailto:25303040095@m.fudan.edu.cn">25303040095@m.fudan.edu.cn</a></dd>
+              </div>
+              <div>
+                <dt>Github主页</dt>
+                <dd><a href="https://github.com/xiaomi0530">https://github.com/xiaomi0530</a></dd>
+              </div>
+            </dl>
+          </div>
+
+          <figure class="avatar-mark avatar-right" aria-label="头像">
+            <img src="fig/avatar.jpg" alt="赖奕承头像">
+          </figure>
         </div>
-
       </section>
 
       <section class="section" id="education" aria-labelledby="education-title">
@@ -44,7 +53,10 @@
         <article class="education-item">
           <div>
             <time datetime="2025-09">2025.09 - 至今</time>
-            <h3>复旦大学</h3>
+            <h3>
+              复旦大学
+              <span class="status-pill">大二在读</span>
+            </h3>
           </div>
           <p>工科试验班（集成电路与微纳电子创新学院）（本科）</p>
         </article>
@@ -125,7 +137,7 @@
             <div class="project-topline">
               <div>
                 <p class="period">大一下</p>
-                <h3>第十届全国大学生集成电路创新创业大赛七星微赛道</h3>
+                <h3>第十届全国大学生集成电路创新创业大赛 - 七星微赛道</h3>
               </div>
               <span class="role">队长</span>
             </div>
@@ -209,3 +221,6 @@
     <script src="script.js"></script>
   </body>
 </html>
+
+
+
