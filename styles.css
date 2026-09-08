@@ -46,6 +46,7 @@ a {
   border-bottom: 1px solid var(--line);
   background: rgba(246, 247, 249, 0.94);
   backdrop-filter: blur(10px);
+  box-shadow: 0 1px 0 rgba(32, 36, 42, 0.03);
 }
 
 .brand {
@@ -62,6 +63,7 @@ a {
 .site-nav a {
   color: var(--muted);
   font-size: 14px;
+  font-weight: 600;
 }
 
 .site-nav a:hover {
@@ -78,11 +80,12 @@ a {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   align-items: center;
-  padding: 34px 36px;
+  padding: 36px 38px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--surface);
-  transition: transform 180ms ease, border-color 180ms ease, background-color 180ms ease, opacity 220ms ease;
+  box-shadow: 0 8px 24px rgba(32, 36, 42, 0.03);
+  transition: transform 180ms ease, border-color 180ms ease, background-color 180ms ease, box-shadow 180ms ease, opacity 220ms ease;
 }
 
 .hero-main {
@@ -164,6 +167,7 @@ h3 {
   margin-bottom: 8px;
   font-size: 20px;
   line-height: 1.4;
+  font-weight: 650;
 }
 
 h4 {
@@ -172,7 +176,7 @@ h4 {
 }
 
 .summary {
-  max-width: 680px;
+  max-width: 620px;
   margin-bottom: 22px;
   color: var(--muted);
   font-size: 18px;
@@ -210,7 +214,9 @@ dd {
   gap: 24px;
   padding-bottom: 8px;
   margin-bottom: 12px;
+  padding-left: 12px;
   border-bottom: 1px solid var(--line);
+  border-left: 3px solid var(--accent);
 }
 
 .section-heading .eyebrow {
@@ -233,7 +239,8 @@ dd {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--surface);
-  transition: transform 180ms ease, border-color 180ms ease, background-color 180ms ease, opacity 220ms ease;
+  box-shadow: 0 8px 24px rgba(32, 36, 42, 0.03);
+  transition: transform 180ms ease, border-color 180ms ease, background-color 180ms ease, box-shadow 180ms ease, opacity 220ms ease;
 }
 
 .education-item {
@@ -501,7 +508,8 @@ time,
   border: 1px solid var(--line);
   border-radius: 8px;
   background: #f8fafc;
-  transition: transform 180ms ease, border-color 180ms ease, background-color 180ms ease, opacity 220ms ease;
+  box-shadow: 0 6px 18px rgba(32, 36, 42, 0.03);
+  transition: transform 180ms ease, border-color 180ms ease, background-color 180ms ease, box-shadow 180ms ease, opacity 220ms ease;
 }
 
 .media-item a {
@@ -560,7 +568,8 @@ time,
 .education-item:hover,
 .media-item:hover {
   border-color: #c8d1db;
-  transform: translateY(-2px);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 28px rgba(32, 36, 42, 0.05);
 }
 
 body.js-reveal .reveal-target {
