@@ -465,7 +465,8 @@ time,
 }
 
 .sxq-frame-hero {
-  max-height: 520px;
+  height: 560px;
+  max-height: 560px;
 }
 
 .sxq-frame img {
@@ -854,9 +855,13 @@ body.js-reveal .reveal-target.is-visible {
     grid-template-columns: 1fr;
   }
 
-  .sxq-frame,
-  .sxq-frame-hero {
+  .sxq-frame {
     height: 240px;
+  }
+
+  .sxq-frame-hero {
+    height: 480px;
+    max-height: 480px;
   }
 }
 
@@ -1064,9 +1069,13 @@ body.js-reveal .reveal-target.is-visible {
     min-height: 240px;
   }
 
-  .sxq-frame,
-  .sxq-frame-hero {
+  .sxq-frame {
     height: 220px;
+  }
+
+  .sxq-frame-hero {
+    height: 440px;
+    max-height: 440px;
   }
 
   .site-footer {
