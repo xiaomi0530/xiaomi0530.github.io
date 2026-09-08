@@ -559,6 +559,11 @@ time,
   padding: 12px;
 }
 
+.cpu-video-block {
+  display: grid;
+  gap: 8px;
+}
+
 .cpu-media-row {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -567,17 +572,20 @@ time,
 
 .cpu-video {
   display: grid;
-  gap: 10px;
-  padding: 10px;
+  padding: 12px;
   background: #fbfcfe;
 }
 
-.cpu-video-lead {
-  aspect-ratio: 16 / 9;
+.cpu-note {
+  padding: 0 2px;
+  color: var(--soft);
+  font-size: 12px;
+  line-height: 1.45;
+  text-align: center;
 }
 
-.cpu-video .media-note {
-  font-size: 11px;
+.cpu-video-lead .cpu-video {
+  aspect-ratio: 16 / 9;
 }
 
 .cpu-video video {
@@ -985,7 +993,7 @@ body.js-reveal .reveal-target.is-visible {
     min-height: 240px;
   }
 
-  .cpu-video .media-note {
+  .cpu-note {
     font-size: 10px;
   }
 
