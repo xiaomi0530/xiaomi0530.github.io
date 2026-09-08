@@ -40,7 +40,7 @@
           </div>
 
           <figure class="avatar-mark avatar-right" aria-label="头像">
-            <img src="fig/avatar.jpg" alt="赖奕承头像">
+            <img src="fig/avatar/avatar.jpg" alt="赖奕承头像">
           </figure>
         </div>
       </section>
@@ -84,7 +84,7 @@
             </div>
             <div class="paper-preview" aria-label="IOVS 文献摘要截图预览">
               <img
-                src="fig/Accurate%20Prediction%20of%20Preoperative%20Refractive%20Error%20for%20High%20Myopia%20Using%20Deep%20Neural%20Networks%20to%20Optimize%20Implantable%20Collamer%20Lens%20Selection%20%20%20IOVS%20%20%20ARVO%20Journals.png"
+                src="fig/IOVS/Accurate%20Prediction%20of%20Preoperative%20Refractive%20Error%20for%20High%20Myopia%20Using%20Deep%20Neural%20Networks%20to%20Optimize%20Implantable%20Collamer%20Lens%20Selection%20%20%20IOVS%20%20%20ARVO%20Journals.png"
                 alt="IOVS 文献摘要截图">
             </div>
           </article>
@@ -102,18 +102,18 @@
             </p>
             <div class="media-showcase" aria-label="面包板 CPU 图片与视频展示">
               <figure class="media-item media-video">
-                <video autoplay muted loop playsinline controls preload="auto" poster="fig/BBCPU_show_poster.jpg">
-                  <source src="fig/BBCPU_show_landscape_fixed.mp4" type="video/mp4">
+                <video autoplay muted loop playsinline controls preload="auto" poster="fig/BBCPU/BBCPU_show_poster.jpg">
+                  <source src="fig/BBCPU/BBCPU_show_landscape_fixed.mp4" type="video/mp4">
                 </video>
               </figure>
               <p class="media-note">录入汇编代码（自编超超超简单指令集）使CPU完成计数功能</p>
               <figure class="media-item media-featured">
-                <a href="fig/BBCPU_all.jpg" target="_blank" rel="noreferrer" aria-label="打开面包板 CPU 整体连线大图">
-                  <img src="fig/BBCPU_all.jpg" alt="面包板单周期单发射 CPU 整体连线展示">
+                <a href="fig/BBCPU/BBCPU_all.jpg" target="_blank" rel="noreferrer" aria-label="打开面包板 CPU 整体连线大图">
+                  <img src="fig/BBCPU/BBCPU_all.jpg" alt="面包板单周期单发射 CPU 整体连线展示">
                 </a>
               </figure>
               <figure class="media-item media-scroll-preview" aria-label="面包板 CPU 验证与调试记录预览">
-                <img src="fig/BBCPU_evl.jpg" alt="面包板单周期单发射 CPU 验证与调试记录">
+                <img src="fig/BBCPU/BBCPU_evl.jpg" alt="面包板单周期单发射 CPU 验证与调试记录">
               </figure>
             </div>
           </article>
@@ -146,6 +146,35 @@
               设计并实现支持RISC-V32IM指令集、工作在100MHz的FPGA上单发射准六级流水线CPU。最终达到2.76 CoreMark/MHz，LUT仅约3600个，动态功耗0.231W，达到单发射低功耗处理器的高性能水平；同时完成各类时序优化，保证功能复杂化下时序收敛。
 
 贡献：1. 指导两名零基础队员掌握FPGA与CPU设计基础；2. 撰写实现基本的CPU架构，与团队合作提出并实现5种创新优化方法，充分利用FPGA片上资源特性，使性能提升近40%，最终在Artix7 FPGA板上上板验证跑分。
+            </div>
+            <div class="sxq-visuals" aria-label="核心创新点示意">
+              <p class="sxq-label">核心创新点示意</p>
+              <figure class="sxq-figure sxq-figure-hero">
+                <div class="sxq-frame sxq-frame-hero">
+                  <img src="fig/SXQ-CPU/SXQCPU_Architecture.png" alt="SXQ-CPU 总体架构图">
+                </div>
+                <figcaption>总体架构图</figcaption>
+              </figure>
+              <div class="sxq-grid">
+                <figure class="sxq-figure">
+                  <div class="sxq-frame">
+                    <img src="fig/SXQ-CPU/branch_prediction_summary.png" alt="分支预测核心创新点示意">
+                  </div>
+                  <figcaption>分支预测机制</figcaption>
+                </figure>
+                <figure class="sxq-figure">
+                  <div class="sxq-frame sxq-frame-static">
+                    <img src="fig/SXQ-CPU/late_bypass_contrast.png" alt="晚转发优化对比示意">
+                  </div>
+                  <figcaption>晚转发优化对比</figcaption>
+                </figure>
+                <figure class="sxq-figure sxq-figure-wide">
+                  <div class="sxq-frame">
+                    <img src="fig/SXQ-CPU/动态深度流水线示意.drawio.png" alt="动态深度流水线示意">
+                  </div>
+                  <figcaption>动态深度流水线</figcaption>
+                </figure>
+              </div>
             </div>
           </article>
 

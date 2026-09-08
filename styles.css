@@ -369,6 +369,84 @@ time,
   height: auto;
 }
 
+.sxq-visuals {
+  width: min(100%, 860px);
+  margin: 22px auto 0;
+}
+
+.sxq-label {
+  margin: 0 0 10px;
+  color: var(--soft);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.sxq-figure {
+  margin: 0;
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+}
+
+.sxq-figure figcaption {
+  margin-top: 8px;
+  color: var(--soft);
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.sxq-frame {
+  height: 280px;
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  scrollbar-gutter: stable;
+  -webkit-overflow-scrolling: touch;
+}
+
+.sxq-frame-static {
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+
+.sxq-frame-static img {
+  width: auto !important;
+  height: auto !important;
+  max-width: 100%;
+  max-height: 100%;
+  min-height: 0;
+  margin: auto;
+  object-fit: contain;
+  object-position: center center;
+}
+
+.sxq-frame-hero {
+  max-height: 520px;
+}
+
+.sxq-frame img {
+  display: block;
+  width: 100%;
+  min-height: 100%;
+  object-fit: contain;
+  object-position: top center;
+}
+
+.sxq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 12px;
+  align-items: start;
+}
+
+.sxq-figure-wide {
+  grid-column: 1 / -1;
+}
+
 .media-showcase {
   display: grid;
   gap: 12px;
@@ -557,6 +635,15 @@ body.js-reveal .reveal-target.is-visible {
   .media-scroll-preview {
     height: 360px;
   }
+
+  .sxq-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sxq-frame,
+  .sxq-frame-hero {
+    height: 240px;
+  }
 }
 
 @media (max-width: 520px) {
@@ -701,6 +788,11 @@ body.js-reveal .reveal-target.is-visible {
   .paper-preview {
     height: 300px;
     min-height: 240px;
+  }
+
+  .sxq-frame,
+  .sxq-frame-hero {
+    height: 220px;
   }
 
   .site-footer {

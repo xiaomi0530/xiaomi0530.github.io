@@ -5,7 +5,7 @@ if (year) {
 }
 
 const revealTargets = document.querySelectorAll(
-  ".hero, .section-heading, .education-item, .project-card, .skill-panel, .media-item, .paper-preview"
+  ".hero, .media-item, .paper-preview"
 );
 
 if (revealTargets.length) {
