@@ -176,10 +176,22 @@ h4 {
 }
 
 .summary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
   max-width: 620px;
   margin-bottom: 22px;
   color: var(--muted);
   font-size: 18px;
+}
+
+.summary-text {
+  min-width: 0;
+}
+
+.hero-status {
+  flex: 0 0 auto;
 }
 
 .profile-grid {
