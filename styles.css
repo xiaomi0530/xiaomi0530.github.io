@@ -680,6 +680,30 @@ time,
   line-height: 1.85;
 }
 
+.instrument-showcase {
+  width: min(100%, 860px);
+  margin: 16px auto 0;
+}
+
+.instrument-showcase img {
+  display: block;
+  width: 100%;
+  max-height: 520px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  object-fit: cover;
+  box-shadow: 0 8px 24px rgba(32, 36, 42, 0.03);
+}
+
+.instrument-showcase figcaption {
+  margin-top: 8px;
+  color: var(--soft);
+  font-size: 12px;
+  line-height: 1.45;
+  text-align: center;
+}
+
 .food-gallery {
   display: grid;
   gap: 22px;
