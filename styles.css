@@ -685,15 +685,21 @@ time,
   margin: 16px auto 0;
 }
 
-.instrument-showcase img {
-  display: block;
+.instrument-preview {
   width: 100%;
   max-height: 520px;
+  overflow-y: auto;
+  overflow-x: hidden;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: #fff;
-  object-fit: cover;
-  box-shadow: 0 8px 24px rgba(32, 36, 42, 0.03);
+  scroll-behavior: smooth;
+}
+
+.instrument-preview img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .instrument-showcase figcaption {
