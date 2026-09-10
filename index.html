@@ -69,10 +69,18 @@
         <div class="section-heading">
           <p class="eyebrow">Projects</p>
           <h2 id="projects-title">项目经历</h2>
+          <nav class="project-index" aria-label="项目目录">
+            <a href="#project-myopia"><span>01</span>近视预测</a>
+            <a href="#project-breadboard"><span>02</span>面包板 CPU</a>
+            <a href="#project-rv32i"><span>03</span>RV32I / RTOS</a>
+            <a href="#project-sxq"><span>04</span>SXQ-CPU</a>
+            <a href="#project-synopsys"><span>05</span>Synopsys 夏校</a>
+            <a href="#project-touch"><span>06</span>Touch</a>
+          </nav>
         </div>
 
         <div class="project-list">
-          <article class="project-card">
+          <article class="project-card" id="project-myopia">
             <div class="project-topline">
               <div>
                 <p class="period">大一上</p>
@@ -92,7 +100,7 @@
             </div>
           </article>
 
-          <article class="project-card compact">
+          <article class="project-card compact" id="project-breadboard">
             <div class="project-topline">
               <div>
                 <p class="period">大一上</p>
@@ -121,13 +129,14 @@
             </div>
           </article>
 
-          <article class="project-card compact">
+          <article class="project-card compact" id="project-rv32i">
             <div class="project-topline">
               <div>
                 <p class="period">大一上</p>
                 <h3>从零完整构建FPGA上RV32I-CPU与配套RTOS</h3>
               </div>
               <span class="role">我自己XD</span>
+              <a class="repo-link" href="https://github.com/xiaomi0530/M-RV32I-CPU" target="_blank" rel="noopener noreferrer" aria-label="在新标签页打开 M-RV32I-CPU GitHub 仓库">GitHub <img src="fig/ui/arrow-up-right.svg" alt="" width="14" height="14"></a>
             </div>
             <p class="project-intro">
               自学CPU架构与Verilog等必备知识，基于 Xilinx Artix-7 FPGA 搭建的 RV32I 处理器与系统平台，围绕指令流水、数据通路、CSR/中断控制、总线互联和外设访问完成从 CPU 到 SoC 的完整实现。工程使用 100MHz 板载时钟，经时钟管理生成 50MHz 核心时钟与 25MHz VGA 时钟，整合 UART、VGA、microSD SPI、PS/2 鼠标、PWM 音频、定时器、RAM/ROM 等模块。
@@ -165,13 +174,14 @@
             </div>
           </article>
 
-          <article class="project-card">
+          <article class="project-card" id="project-sxq">
             <div class="project-topline">
               <div>
                 <p class="period">大一下</p>
                 <h3>第十届全国大学生集成电路创新创业大赛 - 七星微赛道</h3>
               </div>
               <span class="role">队长</span>
+              <a class="repo-link" href="https://github.com/xiaomi0530/SXQ-RV32IM-CPU" target="_blank" rel="noopener noreferrer" aria-label="在新标签页打开 SXQ-RV32IM-CPU GitHub 仓库">GitHub <img src="fig/ui/arrow-up-right.svg" alt="" width="14" height="14"></a>
             </div>
             <div class="project-body">
               设计并实现支持RISC-V32IM指令集、工作在100MHz的FPGA上单发射准六级流水线CPU。最终达到2.76 CoreMark/MHz，LUT仅约3600个，动态功耗0.231W，达到单发射低功耗处理器的高性能水平；同时完成各类时序优化，保证功能复杂化下时序收敛。
@@ -209,7 +219,7 @@
             </div>
           </article>
 
-          <article class="project-card">
+          <article class="project-card" id="project-synopsys">
             <div class="project-topline">
               <div>
                 <p class="period">大一下</p>
@@ -238,13 +248,14 @@
             </div>
           </article>
 
-          <article class="project-card">
+          <article class="project-card" id="project-touch">
             <div class="project-topline">
               <div>
                 <p class="period">大一下</p>
                 <h3>VibeCoding 自研软件 Touch</h3>
               </div>
               <span class="role">独立开发</span>
+              <a class="repo-link" href="https://github.com/xiaomi0530/Touch-App" target="_blank" rel="noopener noreferrer" aria-label="在新标签页打开 Touch-App GitHub 仓库">GitHub <img src="fig/ui/arrow-up-right.svg" alt="" width="14" height="14"></a>
             </div>
             <div class="project-body">
               灵光一闪，使用Codex快速开发Touch应用。<br>Codex自述：Touch 是一款面向线下真实社交记录的 Android 应用，围绕 NFC 见面记录、好友管理、个人名片展示、日历回顾、互动徽章和图文打包分享组织功能，帮助把“见过谁、何时见过、留下了什么”整理成可持续回看的个人关系档案，减少手动记录成本并保持流程清晰稳定；客户端使用 Kotlin 与 Jetpack Compose 构建，围绕主界面、好友、成就、传图和我的等模块组织功能，NFC Reader / HCE 负责近距离碰一碰的交互，配套本地开发后端提供注册登录、账号信息、头像上传、见面记录和设备注册等接口，并用 SQLite 与令牌机制处理基础数据管理。
@@ -377,6 +388,20 @@
       <a href="#top">返回顶部</a>
     </footer>
 
+    <dialog class="image-viewer" aria-labelledby="viewer-title">
+      <div class="viewer-toolbar">
+        <p id="viewer-title"></p>
+        <div class="viewer-actions">
+          <button type="button" data-viewer="out" title="缩小" aria-label="缩小"><img src="fig/ui/zoom-out.svg" alt=""></button>
+          <button type="button" data-viewer="fit" title="适应窗口" aria-label="适应窗口"><img src="fig/ui/maximize.svg" alt=""></button>
+          <button type="button" data-viewer="in" title="放大" aria-label="放大"><img src="fig/ui/zoom-in.svg" alt=""></button>
+          <button type="button" data-viewer="close" title="关闭" aria-label="关闭" autofocus><img src="fig/ui/x.svg" alt=""></button>
+        </div>
+      </div>
+      <div class="viewer-stage" tabindex="0" aria-label="图片预览">
+        <div class="viewer-canvas"><img class="viewer-image" alt=""></div>
+      </div>
+    </dialog>
     <script src="script.js"></script>
   </body>
 </html>
