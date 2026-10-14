@@ -57,6 +57,7 @@ window.PORTFOLIO_DATA = {
       cover: null,
       media: [
         { type: 'video', src: 'fig/M-CPU/Boot_small.mp4', alt: 'RV32I CPU 与 RTOS 开机演示' },
+        { type: 'video', src: 'fig/M-CPU/Boot.mp4', alt: 'RV32I CPU 完整开机流程' },
         { type: 'video', src: 'fig/M-CPU/SD_File_system.mp4', alt: '基于 SD 卡的文件管理系统演示' },
         { type: 'video', src: 'fig/M-CPU/Run_Gamebin.mp4', alt: '从 SD 卡加载运行 .bin 应用：starwar 小游戏' }
       ]
@@ -110,6 +111,7 @@ window.PORTFOLIO_DATA = {
       cover: 'fig/BBCPU/BBCPU_all.jpg',
       media: [
         { type: 'video', src: 'fig/BBCPU/BBCPU_show_landscape_fixed.mp4', poster: 'fig/BBCPU/BBCPU_show_poster.jpg', alt: '录入自编指令集的汇编代码，让面包板 CPU 完成计数' },
+        { type: 'video', src: 'fig/BBCPU/BBCPU_show.mp4', poster: 'fig/BBCPU/BBCPU_show_poster.jpg', alt: '面包板 CPU 运行实拍' },
         { type: 'image', src: 'fig/BBCPU/BBCPU_all.jpg', alt: '面包板单周期单发射 CPU 整体连线' },
         { type: 'image', src: 'fig/BBCPU/BBCPU_evl.jpg', alt: '面包板 CPU 验证与调试记录' }
       ]
@@ -138,6 +140,8 @@ window.PORTFOLIO_DATA = {
       cover: 'fig/Touch/Touch_1.jpg',
       media: [
         { type: 'image', src: 'fig/Touch/Touch_1.jpg', alt: 'Touch 主界面' },
+        { type: 'image', src: 'fig/Touch/Touch_2.jpg', alt: 'Touch 相遇记录界面' },
+        { type: 'image', src: 'fig/Touch/Touch_3.jpg', alt: 'Touch 成就与徽章界面' },
         { type: 'image', src: 'fig/Touch/Touch_4.jpg', alt: 'Touch 我的页面' }
       ]
     },
@@ -165,6 +169,7 @@ window.PORTFOLIO_DATA = {
       ],
       cover: 'fig/Syn/2.jpg',
       media: [
+        { type: 'image', src: 'fig/Syn/1.jpg', alt: 'Synopsys 全流程实践记录 1' },
         { type: 'image', src: 'fig/Syn/2.jpg', alt: 'Synopsys 夏校实践记录 2' },
         { type: 'image', src: 'fig/Syn/1_rotated.jpg', alt: 'Synopsys 夏校实践记录 1' },
         { type: 'image', src: 'fig/Syn/3.jpg', alt: 'Synopsys 夏校实践记录 3' },

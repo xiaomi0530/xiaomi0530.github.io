@@ -110,14 +110,13 @@
 
     vec3 environment(vec3 r) {
       float sky = smoothstep(-.7, 1.0, r.y);
-      vec3 color = mix(vec3(.018, .023, .020), vec3(.20, .23, .24), sky);
-      // The sculpture reflects a virtual photographic studio, with broad
-      // panels, a narrow strip light, and a small lime card off to one side.
-      color += vec3(2.7, 2.8, 2.72) * softbox(r, normalize(vec3(-.75, .55, 1.0)), .33, 1.35, .045);
-      color += vec3(1.70, 1.83, 1.98) * softbox(r, normalize(vec3(.82, .15, .64)), .10, 1.7, .035);
-      color += vec3(1.35, 1.40, 1.38) * softbox(r, normalize(vec3(.20, 1.0, -.15)), 1.3, .28, .06);
-      color += vec3(.72, .74, .70) * softbox(r, normalize(vec3(-.20, -.8, .65)), .8, .16, .08);
-      color += vec3(.33, .41, .09) * softbox(r, normalize(vec3(-1.0, -.30, -.20)), .13, .55, .07) * (0.5 + uEnergy);
+      // A warm ivory studio with slate-blue fill and a restrained copper accent.
+      vec3 color = mix(vec3(.16, .21, .23), vec3(.72, .74, .70), sky);
+      color += vec3(2.28, 2.34, 2.30) * softbox(r, normalize(vec3(-.75, .55, 1.0)), .33, 1.35, .045);
+      color += vec3(.78, 1.02, 1.18) * softbox(r, normalize(vec3(.82, .15, .64)), .10, 1.7, .035);
+      color += vec3(1.42, 1.25, .98) * softbox(r, normalize(vec3(.20, 1.0, -.15)), 1.3, .28, .06);
+      color += vec3(.58, .68, .70) * softbox(r, normalize(vec3(-.20, -.8, .65)), .8, .16, .08);
+      color += vec3(.62, .27, .16) * softbox(r, normalize(vec3(-1.0, -.30, -.20)), .13, .55, .07) * (0.35 + uEnergy * .65);
       color *= 1.0 - .72 * softbox(r, normalize(vec3(.0, .08, 1.0)), .095, 2.0, .022);
       return color;
     }
@@ -134,9 +133,9 @@
       float diffuse = max(dot(n, light), .0);
       float highlight = pow(max(dot(n, normalize(light + v)), .0), 140.0);
       vec3 color = metal * mix(.72, 1.06, fresnel) * mix(.40, 1.0, vOcclusion);
-      color += vec3(.095, .101, .099) * diffuse * vOcclusion;
-      color += vec3(.85) * highlight;
-      color += vec3(.028, .034, .026) * fresnel;
+      color += vec3(.12, .15, .16) * diffuse * vOcclusion;
+      color += vec3(1.02, 1.00, .94) * highlight;
+      color += vec3(.055, .095, .11) * fresnel;
       color = color / (color + vec3(.67));
       color = pow(color, vec3(.88));
       gl_FragColor = vec4(color, 1.0);
@@ -213,8 +212,6 @@
     for (let i = 0; i < mesh.indices.length; i += 3) faces.push(mesh.indices.slice(i, i + 3));
 
     render = () => {
-      fallback.width = canvas.width;
-      fallback.height = canvas.height;
       if (!context) return;
       const width = fallback.width, height = fallback.height;
       context.clearRect(0, 0, width, height);
@@ -234,8 +231,14 @@
         const base = Math.max(0, dot(normal, light));
         const band = Math.pow(Math.max(0, 1 - Math.abs(normal[0] + .32)), 12);
         const rim = Math.pow(1 - Math.abs(normal[2]), 3);
-        const luminance = Math.round(Math.min(245, 28 + base * 107 + band * 150 + rim * 53));
-        context.fillStyle = `rgb(${luminance},${Math.min(255, luminance + 3)},${Math.min(255, luminance + 2)})`;
+        const shade = Math.min(1.2, .56 + base * .42 + band * .20 + rim * .12);
+        const cool = Math.min(.42, Math.max(0, normal[2]) * .30 + Math.max(0, normal[1]) * .10);
+        const copper = Math.min(.26, Math.max(0, -normal[0] * .70 + normal[1] * .08) * .22);
+        let color = [198 * shade, 207 * shade, 204 * shade];
+        color = color.map((value, k) => value * (1 - cool) + [74, 105, 119][k] * cool);
+        color = color.map((value, k) => value * (1 - copper) + [176, 101, 76][k] * copper);
+        const rgb = color.map(value => Math.round(Math.max(0, Math.min(255, value))));
+        context.fillStyle = `rgb(${rgb[0]},${rgb[1]},${rgb[2]})`;
         context.strokeStyle = context.fillStyle;
         context.lineWidth = .8;
         context.beginPath();
@@ -252,8 +255,8 @@
     state.width = Math.max(1, rect.width);
     state.height = Math.max(1, rect.height);
     const dpr = Math.min(window.devicePixelRatio || 1, window.innerWidth < 768 ? 1.5 : 2);
-    canvas.width = Math.round(state.width * dpr);
-    canvas.height = Math.round(state.height * dpr);
+    activeCanvas.width = Math.round(state.width * dpr);
+    activeCanvas.height = Math.round(state.height * dpr);
     render();
   }
 
