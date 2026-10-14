@@ -74,8 +74,9 @@
             <a href="#project-breadboard"><span>02</span>面包板 CPU</a>
             <a href="#project-rv32i"><span>03</span>RV32I / RTOS</a>
             <a href="#project-sxq"><span>04</span>SXQ-CPU</a>
-            <a href="#project-synopsys"><span>05</span>Synopsys 夏校</a>
-            <a href="#project-touch"><span>06</span>Touch</a>
+            <a href="#project-mgpu"><span>05</span>M-GPU</a>
+            <a href="#project-synopsys"><span>06</span>Synopsys 夏校</a>
+            <a href="#project-touch"><span>07</span>Touch</a>
           </nav>
         </div>
 
@@ -219,6 +220,61 @@
             </div>
           </article>
 
+          <article class="project-card" id="project-mgpu">
+            <div class="project-topline">
+              <div>
+                <p class="period">大二上</p>
+                <h3>从零构建 FPGA 图形渲染器 M-GPU</h3>
+              </div>
+              <span class="role">我自己XD</span>
+              <a class="repo-link" href="https://github.com/xiaomi0530/M-GPU" target="_blank" rel="noopener noreferrer" aria-label="在新标签页打开 M-GPU GitHub 仓库">GitHub <img src="fig/ui/arrow-up-right.svg" alt="" width="14" height="14"></a>
+            </div>
+            <p class="project-intro">
+              从零自学图形渲染原理，使用 Verilog 在 Xilinx Artix-7 FPGA 上构建 M-GPU，逐步实现顶点变换、三角形光栅化、颜色插值、片元 FIFO 与帧缓冲写回，并接入 640×480 VGA 显示。围绕定点运算、模块握手与存储访问打通从三维顶点到屏幕像素的完整链路，展示开屏、太空场景、轨道运动与角色模型等画面。
+            </p>
+            <p class="project-intro">
+              后续加入 320×240 双缓冲渲染与垂直消隐换帧，以 RGB332 格式存储画面并放大输出；配套 Python 场景生成与帧缓冲查看工具，通过 RTL 仿真逐像素比对参考结果，结合 Vivado 综合与布局布线完成资源、时序检查，持续探索图形流水线与 FPGA 硬件实现。
+            </p>
+            <div class="media-showcase mgpu-media-showcase" aria-label="M-GPU 视频展示">
+              <div class="cpu-media-row">
+                <div class="cpu-video-block">
+                  <figure class="media-item media-video">
+                    <video autoplay muted loop playsinline controls preload="auto" aria-label="M-GPU 开屏演示">
+                      <source src="fig/M-GPU/1.boot.mp4" type="video/mp4">
+                    </video>
+                  </figure>
+                  <p class="media-note cpu-note">01 · 开屏演示</p>
+                </div>
+                <div class="cpu-video-block">
+                  <figure class="media-item media-video">
+                    <video autoplay muted loop playsinline controls preload="auto" aria-label="M-GPU 太空场景演示">
+                      <source src="fig/M-GPU/2.starwar.mp4" type="video/mp4">
+                    </video>
+                  </figure>
+                  <p class="media-note cpu-note">02 · 太空场景</p>
+                </div>
+              </div>
+              <div class="cpu-media-row">
+                <div class="cpu-video-block">
+                  <figure class="media-item media-video">
+                    <video autoplay muted loop playsinline controls preload="auto" aria-label="M-GPU 轨道运动演示">
+                      <source src="fig/M-GPU/3.orbit.mp4" type="video/mp4">
+                    </video>
+                  </figure>
+                  <p class="media-note cpu-note">03 · 轨道运动</p>
+                </div>
+                <div class="cpu-video-block">
+                  <figure class="media-item media-video">
+                    <video autoplay muted loop playsinline controls preload="auto" aria-label="M-GPU 角色模型演示">
+                      <source src="fig/M-GPU/4.milkdragon_h264.mp4" type="video/mp4">
+                    </video>
+                  </figure>
+                  <p class="media-note cpu-note">04 · 角色模型</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
           <article class="project-card" id="project-synopsys">
             <div class="project-topline">
               <div>
@@ -231,20 +287,46 @@
               在Synopsys工程师指导下，使用VCS、Verdi、SpyGlass、Fusion Compiler、Formality、PrimeTime、StarRC、IC Validator、TestMAX、PrimePower/RedHawk等工具完成数字芯片从RTL到GDSII全流程，覆盖前仿真、逻辑综合、物理实现、形式验证、时序签核、物理验证、可测性设计及功耗/IR-EM分析；模拟部分使用Custom Compiler完成原理图与版图设计，StarRC提取寄生参数，ICV进行物理验证，TotemSC与ParagonX完成可靠性/IR分析及后仿真。最终通过DRC/LVS并达成时序收敛，功耗满足指标。掌握前后端全链路协同与迭代优化方法，积累工程实战经验，获评单日之星与暑期培训优秀学员。
             </div>
             <div class="media-showcase syn-showcase" aria-label="Synopsys 夏校图片展示">
-              <figure class="media-item media-scroll-preview syn-lead">
-                <img src="fig/Syn/2.jpg" alt="Synopsys 夏校图片 2">
+              <figure class="syn-figure syn-hero">
+                <div class="media-item syn-frame">
+                  <img src="fig/Syn/6.jpg" alt="新思科技未来开发者颁奖典礼合影" width="3501" height="2469" loading="lazy" decoding="async">
+                </div>
+                <figcaption>颁奖现场 · 新思科技未来开发者颁奖典礼</figcaption>
               </figure>
-              <div class="syn-gallery-grid">
-                <figure class="media-item media-scroll-preview syn-secondary">
-                  <img src="fig/Syn/1_rotated.jpg" alt="Synopsys 夏校图片 1">
+              <div class="syn-awards">
+                <figure class="syn-figure">
+                  <div class="media-item syn-frame">
+                    <img src="fig/Syn/5.jpg" alt="新思科技明日工程师奖奖牌与开发者大会纪念品" width="4096" height="3072" loading="lazy" decoding="async">
+                  </div>
+                  <figcaption>新思科技明日工程师奖</figcaption>
                 </figure>
-                <figure class="media-item media-scroll-preview syn-secondary">
-                  <img src="fig/Syn/3.jpg" alt="Synopsys 夏校图片 3">
+                <figure class="syn-figure">
+                  <div class="media-item syn-frame">
+                    <img src="fig/Syn/2.jpg" alt="2026 新思科技全流程 IC 设计暑期学校优秀学员证书" width="2256" height="3218" loading="lazy" decoding="async">
+                  </div>
+                  <figcaption>优秀学员 · 荣誉证书</figcaption>
                 </figure>
               </div>
-              <figure class="media-item media-scroll-preview syn-featured">
-                <img src="fig/Syn/4.jpg" alt="Synopsys 夏校图片 4">
-              </figure>
+              <div class="syn-archive">
+                <figure class="syn-figure syn-certificate">
+                  <div class="media-item syn-frame">
+                    <img src="fig/Syn/1_rotated.jpg" alt="2026 新思科技全流程 IC 设计暑期学校结业证书" width="3125" height="2220" loading="lazy" decoding="async">
+                  </div>
+                  <figcaption>全流程 IC 设计 · 结业证书</figcaption>
+                </figure>
+                <figure class="syn-figure">
+                  <div class="media-item syn-frame">
+                    <img src="fig/Syn/3.jpg" alt="新思夏校纪念品与证书留念" width="3072" height="4096" loading="lazy" decoding="async">
+                  </div>
+                  <figcaption>夏校纪念</figcaption>
+                </figure>
+                <figure class="syn-figure">
+                  <div class="media-item syn-frame">
+                    <img src="fig/Syn/4.jpg" alt="新思夏校数字与模拟 IC 设计流程课程安排" width="3072" height="4096" loading="lazy" decoding="async">
+                  </div>
+                  <figcaption>数字 / 模拟课程安排</figcaption>
+                </figure>
+              </div>
             </div>
           </article>
 
