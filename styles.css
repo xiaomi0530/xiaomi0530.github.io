@@ -72,6 +72,8 @@ time { color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums;
 .paper-preview { height: 480px; }
 .paper-preview img, .touch-card img, .instrument-preview img { width: 100%; height: auto; }
 .media-showcase { display: grid; gap: 14px; }
+.galchat-showcase { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 16px; }
+.galchat-showcase .media-item img { width: 100%; height: auto; }
 .media-item { margin: 0; overflow: hidden; min-width: 0; }
 .media-item a { display: block; height: 100%; }
 .media-item img, .media-item video { width: 100%; height: 100%; }
@@ -188,6 +190,7 @@ html:has(.image-viewer[open]) { overflow: hidden; }
   .hero-main { gap: 24px; }
   .profile-grid { gap: 12px 24px; }
   .sxq-grid, .cpu-media-row { grid-template-columns: 1fr; }
+  .galchat-showcase { grid-template-columns: 1fr; }
   .syn-archive { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .syn-certificate { grid-column: 1 / -1; }
   .sxq-frame { height: 300px; }

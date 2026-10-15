@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="赖奕承的个人简历网站">
-    <title>赖奕承 | 个人简历(修建中)</title>
+    <title>赖奕承 | 个人网站</title>
     <link rel="icon" type="image/png" href="fig/avatar/favicon.png">
     <link rel="stylesheet" href="styles.css">
   </head>
@@ -77,6 +77,7 @@
             <a href="#project-mgpu"><span>05</span>M-GPU</a>
             <a href="#project-synopsys"><span>06</span>Synopsys 夏校</a>
             <a href="#project-touch"><span>07</span>Touch</a>
+            <a href="#project-galchat"><span>08</span>GalChat</a>
           </nav>
         </div>
 
@@ -269,7 +270,7 @@
                       <source src="fig/M-GPU/4.milkdragon_h264.mp4" type="video/mp4">
                     </video>
                   </figure>
-                  <p class="media-note cpu-note">04 · 角色模型</p>
+                  <p class="media-note cpu-note">04 · 奶蛙！！</p>
                 </div>
               </div>
             </div>
@@ -351,6 +352,48 @@
                   <img src="fig/Touch/Touch_4.jpg" alt="Touch 我的页面截图">
                 </figure>
               </div>
+            </div>
+          </article>
+
+          <article class="project-card" id="project-galchat">
+            <div class="project-topline">
+              <div>
+                <p class="period">大二上</p>
+                <h3>GalChat（花间信）—— Galgame 式桌面聊天应用</h3>
+              </div>
+              <span class="role">独立开发</span>
+            </div>
+            <p class="project-intro">
+              基于 Electron、React 与 TypeScript 开发 Windows 桌面应用，将真实聊天以 Galgame 的角色立绘、场景与逐字台词呈现。通过 Windows UI Automation 接入用户绑定的微信／QQ 独立私聊窗口，支持消息读取、回复发送、多会话管理、聊天记录导入与履历检索；整合八名角色、96 张表情图与六种动作，并按联系人保存角色、场景和阅读进度。
+            </p>
+            <p class="project-intro">
+              接入 DeepSeek 生成回复建议与受控表情、动作指令，实现台词与角色演出的同步呈现。围绕异步请求设计会话版本校验、超时降级与过期结果丢弃机制，发送环节加入目标窗口核验、重复请求防护和回显确认；采用 SQLite 本地持久化、系统安全存储保护 API Key，并通过 Electron 沙箱与受限 IPC 隔离界面和系统能力，配套业务单测、界面回归及 Windows 安装包构建。
+            </p>
+            <div class="media-showcase galchat-showcase" aria-label="GalChat 应用截图展示">
+              <figure class="image-plate">
+                <div class="media-item">
+                  <img src="fig/GalChat/1.png" alt="GalChat 夜景中的角色立绘与逐字对话界面" width="2138" height="1295" loading="lazy" decoding="async">
+                </div>
+                <figcaption>角色立绘与沉浸式对话</figcaption>
+              </figure>
+              <figure class="image-plate">
+                <div class="media-item">
+                  <img src="fig/GalChat/2.png" alt="GalChat 根据聊天上下文生成的三条回复建议" width="2138" height="1295" loading="lazy" decoding="async">
+                </div>
+                <figcaption>AI 回复建议与手动输入</figcaption>
+              </figure>
+              <figure class="image-plate">
+                <div class="media-item">
+                  <img src="fig/GalChat/3.png" alt="GalChat 日间场景、角色切换与消息发送回显" width="2138" height="1295" loading="lazy" decoding="async">
+                </div>
+                <figcaption>角色、场景与发送回显</figcaption>
+              </figure>
+              <figure class="image-plate">
+                <div class="media-item">
+                  <img src="fig/GalChat/4.png" alt="GalChat 角色表情与上下文回复选项展示" width="2138" height="1295" loading="lazy" decoding="async">
+                </div>
+                <figcaption>表情演出与上下文回复</figcaption>
+              </figure>
             </div>
           </article>
         </div>
